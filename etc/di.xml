@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Atwix Team
+ * @copyright Copyright (c) 2016 Atwix (https://www.atwix.com/)
+ * @package Atwix_AttributePool
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Atwix\AttributePool\Helper\AttributePoolInterface" type="Atwix\AttributePool\Helper\AttributePool" />
+    <type name="Atwix\AttributePool\Helper\AttributePool">
+        <arguments>
+            <argument name="attributes" xsi:type="array">
+                <item name="name" xsi:type="string">name</item>
+                <item name="description" xsi:type="string">description</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Atwix\AttributePool\Helper\IterableAttributePool">
+        <arguments>
+            <argument name="attributes" xsi:type="array">
+                <item name="name" xsi:type="string">name</item>
+                <item name="description" xsi:type="string">description</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
